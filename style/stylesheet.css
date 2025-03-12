@@ -44,10 +44,7 @@
             font-size: 3rem;
             color: #e0e0e0;
             margin-bottom: 10px;
-        }
-        header h2 {
-           font-family: 'Eigerdals_Bold';
-        }
+        } 
 
         header p {
             font-size: 1.2rem;
@@ -64,6 +61,7 @@
         .main-content h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            font-family: 'Eigerdals_Bold';
         }
 
         .main-content p {
@@ -94,6 +92,7 @@
 
             .main-content h2 {
                 font-size: 2rem;
+                font-family: 'Eigerdals_Bold';
             }
 
             .main-content p {
