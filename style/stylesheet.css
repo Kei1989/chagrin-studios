@@ -1,7 +1,11 @@
 @font-face {
            font-family: 'Eigerdals_Regular';
            src: url('font/Eigerdals_Regular.otf'); /*URL to font*/
-                }
+           }
+@font-face {
+           font-family: 'Eigerdals_Bold';
+           src: url('font/Eigerdals_Bold.otf');
+           }
         {
             margin: 0;
             padding: 0; 
@@ -36,9 +40,13 @@
         }
 
         header h1 {
+            font-family: 'Eigerdals_Bold';
             font-size: 3rem;
             color: #e0e0e0;
             margin-bottom: 10px;
+        }
+        header h2 {
+           font-family: 'Eigerdals_Bold';
         }
 
         header p {
