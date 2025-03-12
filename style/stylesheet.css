@@ -1,6 +1,6 @@
 @font-face {
            font-family: 'Eigerdals_Regular';
-           src: url('../fonts/Eigerdals_Regular.otf'); /*URL to font*/
+           src: url('http://chagrinstudio.com/fonts/Eigerdals_Regular.otf'); /*URL to font*/
                 }
         {
             margin: 0;
