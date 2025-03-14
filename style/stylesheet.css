@@ -1,101 +1,147 @@
 @font-face {
-           font-family: 'Eigerdals_Regular';
-           src: url('font/Eigerdals_Regular.otf'); /*URL to font*/
-           }
+font-family: 'Eigerdals_Regular';
+src: url('font/Eigerdals_Regular.otf'); /*URL to font*/
+}
 @font-face {
-           font-family: 'Eigerdals_Bold';
-           src: url('font/Eigerdals_Bold.otf');
-           }
-        {
-            margin: 0;
-            padding: 0; 
-            box-sizing: border-box;
-        }
+font-family: 'Eigerdals_Bold';
+src: url('font/Eigerdals_Bold.otf');
+}
+{
+margin: 0;
+padding: 0; 
+box-sizing: border-box;
+}
 
-        /* Flexbox Layout for Sticky Footer */
-        html, body {
-            height: 100%;
-        }
+/* Flexbox Layout for Sticky Footer */
+html, body {
+height: 100%;
+}
 
-        body { 
-            font-family: 'Eigerdals_Regular';
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-        }
+body { 
+font-family: "Josefin Sans", sans-serif; 
+/*background-color: #F1F3F8;*/
+background: linear-gradient(22deg, #111, #313131);
+color: #DFD3C3;
+line-height: 1.6;
+display: flex;
+flex-direction: column; 
+margin: 0px;
+text-shadow: 0.01em 0.01em 1px rgba(0,0,0);
+text-rendering: optimizeLegibility !important;
+-webkit-font-smoothing: antialiased !important;
+} 
+a {
+    text-decoration: none;
+}
+.navbar {
+padding: 0;
+text-align: center;  
+font-family: "Josefin Sans", sans-serif; 
+font-weight: 350;
+font-style: normal;
+position: fixed;
+width: 100vw;
 
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+}
+.navbar p {
+font-size: 1.2rem;
+color: #F8EDE3;
+}
+.navbar a:hover {
+color: #EC9706;    
+}
+.navbar a {
+color: #b4b4b4; 
+}
 
-        /* Header */
-        header {
-            padding: 40px 0;
-            text-align: center;
-        }
+/* Container */
+.container {
+max-width: 1200px;
+margin: 0 auto;
+}
 
-        header h1 {
-            font-family: 'Eigerdals_Bold';
-            font-size: 3rem;
-            color: #e0e0e0;
-            margin-bottom: 10px;
-        } 
+/* Header */
+header {
+padding: 60px 0;
+text-align: center;
+}
 
-        header p {
-            font-size: 1.2rem;
-            color: #b0b0b0;
-        }
+header h1 { 
+font-size: 3rem;
+color: #e0e0e0;
+margin-bottom: 10px; 
+} 
 
-        /* Main Content */
-        .main-content {
-            padding: 60px 0;
-            text-align: center;
-            flex: 1; /* This makes the content grow to fill available space */
-        }
+header p {
+font-size: 1.2rem;
+color: #b0b0b0;
+}
 
-        .main-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-family: 'Eigerdals_Bold';
-        }
+/* Main Content */
+.main-content {
+padding: 60px 0;
+text-align: center;
+flex: 1; /* This makes the content grow to fill available space */
+}
 
-        .main-content p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #b0b0b0;
-        }
+.main-content h2 {
+font-size: 2.5rem;
+margin-bottom: 20px; 
+}
 
-        /* Footer */
-        footer {
-            padding: 20px 0;
-            text-align: center;
-            border-top: 1px solid #333;
-            background-color: #121212;
-        }
+.main-content p {
+font-size: 1.1rem;
+max-width: 800px;
+margin: 0 auto;
+color: #b0b0b0;
+}
 
-        footer p {
-            font-size: 0.9rem;
-            color: #b0b0b0;
-        }
+.sm_footer {
+padding: 0px;
+text-align: center; 
+position: relative;
+margin: 0 auto;
+box-sizing: border-box;
+padding-right: 12px;
+width: 100vw;
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
+.socialmediabutton {
+filter: invert(50%) sepia(10%) saturate(100%) hue-rotate(0deg) brightness(140%) contrast(100%);
+width: 1.4em;
+margin: 0 1em;
 
-            .main-content h2 {
-                font-size: 2rem;
-                font-family: 'Eigerdals_Bold';
-            }
+}
+/* Footer */
+footer {
+padding: 0px;
+text-align: center;
+border-top: 0.1em solid #EC9706;
+background-color: #121212;
+position: relative;
+margin-bottom: 0px;
+width: 100vw;
+max-width: 100%;
+margin-left: 0px;
+}
 
-            .main-content p {
-                font-size: 1rem;
-            }
-        }
+footer p {
+font-size: 0.9rem;
+color: #b0b0b0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+header h1 {
+font-size: 2.5rem;
+}
+
+.main-content h2 {
+font-size: 2rem;
+font-family: 'Eigerdals_Bold';
+}
+
+.main-content p {
+font-size: 1rem;
+}
+}
