@@ -7,7 +7,7 @@
  */
 export async function onRequestGet(context) {
   // Get the D1 binding from the environment (set in the Cloudflare dashboard)
-  const db = context.env.devlogtest; // Use the binding name you chose (e.g., 'DB')
+  const db = context.env.DB; // Use the binding name you chose (e.g., 'DB')
 
   try {
     // Prepare and execute the SQL query
