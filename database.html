@@ -6,8 +6,8 @@
   <ul id="user-list"></ul>
 
   <script>
-    async function fetchUsers() {
-      const userList = document.getElementById('user-list');
+    async function fetchEntries() {
+      const entryList = document.getElementById('user-list');
       try {
         // Fetch data from the Pages Function endpoint
         const response = await fetch('/functions/devlogendpoint.js'); // Relative URL works fine
@@ -16,26 +16,26 @@
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const users = await response.json();
+        const entries = await response.json();
 
         // Clear previous list items
-        userList.innerHTML = '';
+        entryList.innerHTML = '';
 
         // Display the users
-        users.forEach(user => {
+        entries.forEach(user => {
           const listItem = document.createElement('li');
-          listItem.textContent = `ID: ${user.id}, Name: ${user.name}, Email: ${user.email}`;
-          userList.appendChild(listItem);
+          listItem.textContent = `ID: ${entries.id}, Name: ${entries.user}, Title: ${entries.title}`;
+          entryList.appendChild(listItem);
         });
 
       } catch (error) {
         console.error('Error fetching users:', error);
-        userList.innerHTML = '<li>Failed to load users.</li>';
+        entryList.innerHTML = '<li>Failed to load users.</li>';
       }
     }
 
     // Fetch users when the page loads
-    fetchUsers();
+    fetchEntries();
   </script>
 </body>
 </html>
