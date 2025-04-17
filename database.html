@@ -6,36 +6,36 @@
   <ul id="user-list"></ul>
 
   <script>
-    async function fetchEntries() {
-      const entryList = document.getElementById('user-list');
+    async function fetchUsers() {
+      const userList = document.getElementById('user-list');
       try {
         // Fetch data from the Pages Function endpoint
-        const response = await fetch('/functions/devlogendpoint.js'); // Relative URL works fine
+        const response = await fetch('/api/users'); // Relative URL works fine
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const entries = await response.json();
+        const users = await response.json();
 
         // Clear previous list items
-        entryList.innerHTML = '';
+        userList.innerHTML = '';
 
         // Display the users
-        entries.forEach(user => {
+        users.forEach(user => {
           const listItem = document.createElement('li');
-          listItem.textContent = `ID: ${entries.id}, Name: ${entries.user}, Title: ${entries.title}`;
-          entryList.appendChild(listItem);
+          listItem.textContent = `ID: ${user.id}, Name: ${user.name}, Email: ${user.email}`;
+          userList.appendChild(listItem);
         });
 
       } catch (error) {
         console.error('Error fetching users:', error);
-        entryList.innerHTML = '<li>Failed to load users.</li>';
+        userList.innerHTML = '<li>Failed to load users.</li>';
       }
     }
 
     // Fetch users when the page loads
-    fetchEntries();
+    fetchUsers();
   </script>
 </body>
 </html>
