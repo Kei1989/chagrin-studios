@@ -10,7 +10,7 @@
       const userList = document.getElementById('user-list');
       try {
         // Fetch data from the Pages Function endpoint
-        const response = await fetch('/api/users'); // Relative URL works fine
+        const response = await fetch('/functions/devlogendpoint.js'); // Relative URL works fine
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
